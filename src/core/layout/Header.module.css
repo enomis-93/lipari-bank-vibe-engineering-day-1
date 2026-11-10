@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  flex: 0 0 64px;
+  align-items: center;
+  gap: 1rem;
+  height: 64px;
+  padding-inline: 1.5rem;
+  color: var(--color-white);
+  background: var(--color-primary-dark);
+}
+
+.brand {
+  color: inherit;
+  font-size: 1.4rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.label {
+  margin-left: auto;
+  font-size: 0.875rem;
+}
+
+.menuButton {
+  display: none;
+  padding: 0.5rem;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.menuButton:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding-inline: 1rem;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .label {
+    display: none;
+  }
+}
