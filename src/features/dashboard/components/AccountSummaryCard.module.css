@@ -1,0 +1,57 @@
+.card {
+  padding: 1.5rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.type {
+  flex: 0 0 auto;
+  padding: 0.25rem 0.5rem;
+  color: var(--color-primary);
+  background: #e8eef8;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.iban {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-block: 1.25rem;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.label,
+.balanceLabel {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
+.balanceLabel {
+  margin: 0 0 0.25rem;
+}
+
+.balance {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}

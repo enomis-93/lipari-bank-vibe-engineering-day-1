@@ -1,9 +1,12 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Sidebar.module.css';
 
 const menuItems = [
-  { label: 'Dashboard', hash: '#dashboard' },
-  { label: 'Movimenti recenti', hash: '#transactions-title' },
+  { label: 'Dashboard', to: '/', end: true },
+  { label: 'Conti', to: '/accounts' },
+  { label: 'Investimenti', to: '/investments' },
+  { label: 'Polizze', to: '/polizze' },
+  { label: 'Admin', to: '/admin' },
 ] as const;
 
 interface SidebarProps {
@@ -17,10 +20,15 @@ export function Sidebar({ open, onNavigate }: SidebarProps) {
       <nav id="app-navigation" aria-label="Navigazione principale">
         <ul className={styles.links}>
           {menuItems.map((item) => (
-            <li key={item.hash}>
-              <Link to={{ hash: item.hash }} onClick={onNavigate}>
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                end={'end' in item && item.end}
+                className={({ isActive }) => (isActive ? styles.active : undefined)}
+                onClick={onNavigate}
+              >
                 {item.label}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

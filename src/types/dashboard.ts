@@ -1,13 +1,9 @@
-export interface Transaction {
-  id: string;
-  description: string;
-  date: string;
-  amount: number;
-}
+import type { Account, Movement } from '@/types/banking';
 
 export interface DashboardData {
+  account: Account;
   balance: number;
   income: number;
   expenses: number;
-  transactions: Transaction[];
+  transactions: Movement[];
 }

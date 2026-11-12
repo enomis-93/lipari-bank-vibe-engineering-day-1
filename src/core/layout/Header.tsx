@@ -1,4 +1,5 @@
 import type { RefObject } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 interface HeaderProps {
@@ -20,10 +21,15 @@ export function Header({ menuButtonRef, sidebarOpen, onToggleSidebar }: HeaderPr
       >
         {sidebarOpen ? 'Chiudi menu' : 'Menu'}
       </button>
-      <a className={styles.brand} href="#dashboard">
-        LipariBank
-      </a>
-      <span className={styles.label}>Area personale</span>
+      <Link className={styles.brand} to="/">
+        🏦 LipariBank
+      </Link>
+      <div className={styles.user}>
+        <span className={styles.userIcon} aria-hidden="true">
+          👤
+        </span>
+        <span aria-label="Utente segnaposto">Utente</span>
+      </div>
     </header>
   );
 }

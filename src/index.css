@@ -1,5 +1,10 @@
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
   color: #17243b;
   background: #f3f5f8;
   font-synthesis: none;
@@ -12,6 +17,8 @@
   --color-text: #17243b;
   --color-muted: #526179;
   --color-border: #dce2e9;
+  --color-success: #167447;
+  --color-danger: #b42318;
   --radius-card: 0.75rem;
   --shadow-card: 0 2px 8px rgb(0 24 60 / 6%);
 }
@@ -23,106 +30,4 @@
 body {
   margin: 0;
   min-width: 320px;
-}
-
-a:focus-visible {
-  outline: 3px solid #ffcc33;
-  outline-offset: 4px;
-}
-
-.page-heading {
-  margin-block: 2.5rem 1.75rem;
-}
-
-.page-heading h1 {
-  margin: 0;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-}
-
-.page-heading p {
-  color: var(--color-muted);
-}
-
-.page-heading .eyebrow {
-  color: var(--color-primary);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.demo-notice {
-  font-size: 0.875rem;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
-  gap: 1rem;
-}
-
-.stat-card,
-.panel {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-}
-
-.stat-card {
-  padding: 1.5rem;
-}
-
-.stat-card h2 {
-  margin: 0;
-  color: var(--color-muted);
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.stat-card p {
-  margin: 0.75rem 0 0;
-  color: var(--color-primary);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.panel {
-  margin-block: 1.5rem 3rem;
-  padding: 1.5rem;
-}
-
-.panel h2 {
-  margin: 0 0 1rem;
-  font-size: 1.125rem;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 0.875rem 0.5rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-th {
-  color: var(--color-muted);
-  font-size: 0.875rem;
-}
-
-tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-.amount {
-  text-align: right;
-  white-space: nowrap;
 }

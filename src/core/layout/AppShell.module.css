@@ -1,8 +1,8 @@
 .shell {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   height: 100dvh;
+  overflow: hidden;
 }
 
 .body {
@@ -11,12 +11,14 @@
   flex: 1;
   min-height: 0;
   min-width: 0;
+  padding-top: 64px;
 }
 
 .main {
   flex: 1;
   min-width: 0;
   overflow: auto;
+  margin-left: 256px;
   background: var(--color-background);
 }
 
@@ -28,4 +30,10 @@
 .content {
   width: min(100% - 2rem, 72rem);
   margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .main {
+    margin-left: 0;
+  }
 }

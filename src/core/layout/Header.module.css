@@ -1,12 +1,16 @@
 .header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
-  flex: 0 0 64px;
   align-items: center;
   gap: 1rem;
   height: 64px;
   padding-inline: 1.5rem;
   color: var(--color-white);
-  background: var(--color-primary-dark);
+  background: var(--color-primary);
 }
 
 .brand {
@@ -16,9 +20,21 @@
   text-decoration: none;
 }
 
-.label {
+.brand:focus-visible {
+  outline: 3px solid #ffcc33;
+  outline-offset: 4px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-left: auto;
   font-size: 0.875rem;
+}
+
+.userIcon {
+  font-size: 1.25rem;
 }
 
 .menuButton {
@@ -46,7 +62,11 @@
     display: block;
   }
 
-  .label {
-    display: none;
+  .user {
+    font-size: 0;
+  }
+
+  .userIcon {
+    font-size: 1.25rem;
   }
 }

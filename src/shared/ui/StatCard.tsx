@@ -1,13 +1,16 @@
+import { formatCurrency } from '@/shared/formatters';
+import styles from './StatCard.module.css';
+
 interface StatCardProps {
   label: string;
-  value: string;
+  value: number;
 }
 
 export function StatCard({ label, value }: StatCardProps) {
   return (
-    <div className="stat-card">
-      <h2>{label}</h2>
-      <p>{value}</p>
+    <div className={styles.card}>
+      <h2 className={styles.label}>{label}</h2>
+      <p className={styles.value}>{formatCurrency(value)}</p>
     </div>
   );
 }

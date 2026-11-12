@@ -38,3 +38,8 @@ visibili mentre il contenuto scorre indipendentemente. Su schermi fino a 640 px
 la sidebar si apre tramite il pulsante Menu e si chiude anche con Esc.
 La navigazione usa React Router; i collegamenti della sidebar portano alle
 sezioni della dashboard senza ricaricare la pagina.
+
+La dashboard include componenti presentazionali tipizzati in
+`src/features/dashboard/components/`: `AccountSummaryCard` e `MovementRow`.
+Ogni componente UI definisce i propri stili in un CSS Module; `src/index.css`
+contiene soltanto reset di base e token globali del design system.
